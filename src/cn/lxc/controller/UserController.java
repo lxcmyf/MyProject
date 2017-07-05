@@ -20,7 +20,7 @@ import cn.lxc.vo.User;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController {//
 	@Autowired
 	private UserService userService;
 	
