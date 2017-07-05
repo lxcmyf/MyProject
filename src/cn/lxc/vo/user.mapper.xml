@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lxc.vo.UserMapper">
+	<select id="getList" resultType="cn.lxc.vo.User">
+		select * from t_user
+	</select>
+	<select id="selectByPk" parameterType="Integer" resultType="cn.lxc.vo.User">
+		SELECT
+			ID,
+			NAME,
+			AGE
+		FROM
+			T_USER
+		WHERE ID = #{id}
+	</select>
+	<insert id="insert" parameterType="cn.lxc.vo.User" >
+		INSERT INTO 
+			T_USER(ID,NAME,AGE)
+		VALUES(
+			#{id},
+			#{name},
+			#{age}
+		)
+	</insert>
+	<update id="update" parameterType="cn.lxc.vo.User">
+		UPDATE
+			T_USER
+		<set>
+			ID=#{id},
+			NAME=#{name},
+			AGE=#{age}
+		</set>
+		WHERE
+			ID=#{id}
+	</update>
+	<delete id="delete">
+		delete from t_user where id=#{id}
+	</delete>
+</mapper>

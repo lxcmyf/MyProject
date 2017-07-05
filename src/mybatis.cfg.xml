@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+   		<!-- <package name="cn.lxc.vo" /> 或者-->
+		<typeAlias alias="User" type="cn.lxc.vo.User" />
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="cn/lxc/vo/user.mapper.xml" />
+	</mappers>
+</configuration>
